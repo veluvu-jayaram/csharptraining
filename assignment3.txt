@@ -1,0 +1,111 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ustud
+{
+    interface employee
+    {
+        string ename { get; set; }
+    }
+    interface istudent
+    {
+        string sname { get; set; }
+        string libid { get; set; }
+        int year { get; set; }
+
+        string method1();
+
+    }
+    public class Parttimesudent : istudent,employee
+    {
+
+        public string sname 
+        { get ; set ; }
+        public string libid { get ; set; }
+        public int year { get; set; }
+        public string ename { get; set; }
+
+        public string method1()
+        {
+            return "i am in register";
+        }
+
+ 
+    }
+}
+main method
+ private static void student()
+        {
+            Parttimesudent s1 = new Parttimesudent();
+            Console.WriteLine("student details");
+            s1.sname = "jay";
+            Console.WriteLine(s1.sname);
+            s1.libid = "libid123";
+            Console.WriteLine(s1.libid);
+            s1.year = 2021;
+            Console.WriteLine(s1.year);
+            
+            Console.WriteLine(s1.method1());
+
+            Console.WriteLine("employee details");
+            Parttimesudent e1 = new Parttimesudent();
+            e1.ename = "jagadeesh";
+            Console.WriteLine(e1.ename);
+            e1.libid = "libid123";
+            Console.WriteLine(e1.libid);
+            e1.year = 2018;
+            Console.WriteLine(e1.year);
+
+        }
+
+
+2) 
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Myclasslib1
+{
+    interface IStudent
+    {
+        public string LibCardNumber { set; get; }
+        public int Year { get; set; }
+
+         
+        public string  NoPartTimeStudent();
+       public  string PartTimeStudents();
+
+
+    }
+    public class PartTimeStudent : IStudent
+    {
+        public string LibCardNumber { get ; set ; }
+        public int Year { get; set; }
+
+
+     
+        public string NoPartTimeStudent()
+        {
+            return "I dont want Parttime studet";
+        }
+
+        public string PartTimeStudents()
+        {
+            return "I  want Parttime studet";
+        }
+    }
+}
+
+
+MAINMETHOD:
+
+ private static void InterfaceSample2()
+        {
+            PartTimeStudent student = new PartTimeStudent();
+            student.LibCardNumber = "64768378";
+            student.Year = 2021;
+            student.NoPartTimeStudent();
+            student.PartTimeStudents();
+            Console.WriteLine(student.PartTimeStudents());
+        }

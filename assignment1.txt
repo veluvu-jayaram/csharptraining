@@ -1,0 +1,103 @@
+using System;
+using mylibrary;
+
+namespace asproject
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //1.sum and average
+
+
+                Console.WriteLine("enter a,b,c values");
+            var a = Convert.ToInt32(Console.ReadLine());
+            var b = Convert.ToInt32(Console.ReadLine());
+            var c = Convert.ToInt32(Console.ReadLine());
+            int add = a + b + c;
+            int avg = add / 3;
+            Console.WriteLine("the sum of three numbers is : " + add);
+            Console.WriteLine("the average of three numbers is :" + avg);
+
+            //2. holiday or not
+
+
+            Console.WriteLine("enter number in between 0 to 7");
+            int x = Convert.ToInt32(Console.ReadLine()); ;
+
+            if (a > 5)
+            {
+                Console.WriteLine("holiday");
+            }
+            else if (x <= 5 && x > 0)
+            {
+                Console.WriteLine(" not a holiday");
+            }
+            //3.descending order
+            Console.WriteLine("Please write 3 numbers:");
+            double d = double.Parse(Console.ReadLine());
+            double e = double.Parse(Console.ReadLine());
+            double f = double.Parse(Console.ReadLine());
+
+            if (d > e && d > f)
+            {
+                if (e > f)
+                {
+                    Console.WriteLine("Descending order A: " + d + " " + e + " " + f);
+                }
+                else
+                {
+                    Console.WriteLine("Descending order A1: " + d + " " + f + " " + e);
+                }
+            }
+            if (e > d && e > f)
+            {
+                if (d > f)
+                {
+                    Console.WriteLine("Descending order B: " + e + " " + d + " " + f);
+                }
+                else
+                {
+                    Console.WriteLine("Descending order B1: " + e + " " + f + " " + d);
+                }
+            }
+            if (f > d && f > e)
+            {
+                if (d > e)
+                {
+                    Console.WriteLine("Descending order C: " + f + " " + d + " " + e);
+                }
+                else
+                {
+                    Console.WriteLine("Descending order C1: " + f + " " + e + " " + d);
+                }
+                //4.prime or not
+
+
+                int num, i;
+                bool x = false;
+
+                Console.Write("Input  a number: ");
+                num = Convert.ToInt32(Console.ReadLine());
+                for (i = 2; i <= num / 2; i++)
+                {
+                    if (num % i == 0)
+                    {
+                        x = true;
+                        break;
+                    }
+                }
+                if (x == false && num != 1)
+                {
+                    Console.Write("{0} is a prime number", num);
+                }
+                else
+                    Console.Write("{0} is not a prime number\n", num);
+          }
+     }
+}
+            
+
+
+
+

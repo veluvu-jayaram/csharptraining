@@ -1,0 +1,270 @@
+IN MAIN METHOD:
+using System;
+
+namespace CircleProgram
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            CircleProg cp = new CircleProg();
+            cp.radius = 12;
+            Console.WriteLine( "The radius of circle " + cp.GetRadius());
+            Console.WriteLine( "The Diameter of circle " + cp.calcDiameter());
+            Console.WriteLine("The Area of circle " + cp.calArea()) ;
+
+
+            EmpBankAccount empbank = new EmpBankAccount();
+            Console.WriteLine(empbank.salary);
+            Console.WriteLine(empbank.BankAccount(1200));
+
+
+            EmployeeSalary empsal = new EmployeeSalary();
+
+            empsal.Id = 21024;
+            empsal.EmpName = "JAY";
+            empsal.BasicSalary = 15000;
+            empsal.HRAllowance = 7500;
+            empsal.TravelAllowent = 2000;
+            Console.WriteLine(empsal.Id);
+
+            Person pr = new Person();
+          DateTime dob = Convert.ToDateTime("24-02-2000");
+            int age=pr.GetAge(dob);
+            Console.WriteLine(age);
+            Console.WriteLine( pr.CanMarry(age));
+            
+            
+
+
+
+        }
+    }
+}
+
+
+circle programme
+
+namespace CircleProgram
+{
+
+    public class EmployeeSalary
+    {
+        private int EmployeeId;
+        public string EmpName;
+        public  int BasicSalary;
+        protected int HRAllowance;
+        public  int TravelAllowent;
+
+        public int Id
+        {
+            get
+            {
+                return EmployeeId;
+            }
+            set
+            {
+                EmployeeId=value;
+            }
+        }
+
+        public void Employeesalary( )
+        {
+
+        }
+
+        public  void EmpSalary(int empid, string empname,int Bsalary,int HRallowance,int travel)
+        {
+            
+            EmpName = empname;
+            BasicSalary = Bsalary;
+            HRAllowance = HRallowance;
+            TravelAllowent = travel;
+
+
+        }
+    }
+    public class HR:EmployeeSalary
+    {
+      public void print()
+        {
+
+        }
+    }
+}
+
+
+bank deposit
+
+namespace CircleProgram
+{
+    class EmpBankAccount
+    {
+        public int salary;
+        public EmpBankAccount()
+        {
+            salary = 500;    
+            
+        }
+        public int BankAccount(int salary)
+        {
+            this.salary = salary;
+            return salary;
+        }
+    }
+
+
+employee detailes
+
+namespace CircleProgram
+{
+
+    public class EmployeeSalary
+    {
+        private int EmployeeId;
+        public string EmpName;
+        public  int BasicSalary;
+        protected int HRAllowance;
+        public  int TravelAllowent;
+
+        public int Id
+        {
+            get
+            {
+                return EmployeeId;
+            }
+            set
+            {
+                EmployeeId=value;
+            }
+        }
+
+        public void Employeesalary( )
+        {
+
+        }
+
+        public  void EmpSalary(int empid, string empname,int Bsalary,int HRallowance,int travel)
+        {
+            
+            EmpName = empname;
+            BasicSalary = Bsalary;
+            HRAllowance = HRallowance;
+            TravelAllowent = travel;
+
+
+        }
+    }
+
+person detailes;
+
+
+namespace CircleProgram
+{
+   public class Person
+    {
+       public string Name;
+       public string Address;
+        public int Age;
+        
+       public  enum Maritalstatus
+        {
+             single, married, divorced ,widowed
+        }
+        public  Person()
+        {
+
+        }
+        public void PersonDetailes(string name,string address,int age,string maritalsatus)
+        {
+            Name = name;
+            Address = address;
+            Age = age;
+            
+        }
+
+        public int GetAge(DateTime dob)
+        {
+            int age = 0;
+            age = DateTime.Now.Subtract(dob).Days;
+            age = age / 365;
+            return age;
+        }
+        public Boolean CanMarry(int age)
+        {
+            if(age>18)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+    }
+
+
+cicle code (main)
+   using System;
+using ClassLibrary1;
+using CIRCLE;
+
+namespace CIRCLE
+{
+    class Program
+    {
+         static void Main(string[] args)
+        {
+            Circle();
+       
+
+        private static void Circle()
+        {
+            Circle Cobj = new Circle();
+            Cobj.radius = 10;
+            Console.WriteLine("Radius =" + Cobj.GetRadius());
+            Console.WriteLine("Diameter =" + Cobj.CalcDiameter());
+            Console.WriteLine("Area =" + Cobj.CalArea());
+        }
+
+    }
+}
+   
+
+( class) circle
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Result ob = new Result();
+            string str = ob.Display();
+
+            Console.WriteLine(str);
+            Console.ReadLine();
+        }
+    }
+
+    public sealed class Result
+    {
+        public string Display()
+        {
+            return "Passed";
+        }
+    }
+}
+
+
+
+
+
+
+
